@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: osama-portfolio-deploy
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: osama-portfolio
+
+  template:
+    metadata:
+      labels:
+        app: osama-portfolio
+
+    spec:
+      containers:
+      - name: osama-portfolio-container
+        image: osama-portfolio:v4
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 80

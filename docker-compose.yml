@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx
+    container_name: osama-personal-site
+    ports:
+      - "8082:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: always
