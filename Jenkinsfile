@@ -11,7 +11,7 @@ pipeline {
 
         stage('Load Image Into Kind') {
             steps {
-                sh 'kind load docker-image osama-portfolio:v4 --name osama-cluster'
+                sh '/usr/local/bin/kind load docker-image osama-portfolio:v4 --name osama-cluster'
             }
         }
 
