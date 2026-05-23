@@ -10,7 +10,7 @@ pipeline {
 
         stage('Deploy To Kubernetes') {
             steps {
-                sh 'kubectl apply -f portfolio-deployment.yaml'
+                sh '/snap/bin/kubectl apply -f portfolio-deployment.yaml'
             }
         }
     }
